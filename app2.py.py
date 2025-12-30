@@ -1,7 +1,8 @@
 import streamlit as st
 import requests
+import os
 st.title("Weather Report")
-API_KEY = "df85785afc6002c4afc29f38eaa7cebc"
+API_KEY = os.getenv("OPENWEATHER_API_KEY")
 city = st.text_input("Enter City Name")
 if st.button("Get Weather"):
     if city:
